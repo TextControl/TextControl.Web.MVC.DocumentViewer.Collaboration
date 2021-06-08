@@ -1,0 +1,12 @@
+﻿@using TXTextControl.Web.MVC.DocumentViewer
+
+@Html.TXTextControl().DocumentViewer(settings => {
+    settings.DocumentPath = AppDomain.CurrentDomain.GetData("DataDirectory").ToString() + "\\car_insurance.tx";
+    settings.Dock = DocumentViewerSettings.DockStyle.Window;
+    settings.IsSelectionActivated = true;
+    settings.ShowThumbnailPane = true;
+    settings.UserNames = new string[] { Guid.NewGuid().ToString() };
+}).Render()
+
+<script src="~/lib/microsoft-signalr/signalr.js"></script>
+<script src="~/js/collab.js"></script>
