@@ -1,50 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="licenses.licx" />
-  </ItemGroup>
   
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <EmbeddedResource Include="licenses.licx" />
-  </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.4" />
-    <PackageReference Include="TXTextControl.Web.DocumentViewer" Version="32.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="TXDocumentServer">
-      <HintPath>..\..\..\..\..\Program Files\Text Control GmbH\TX Text Control 32.0.NET Server for ASP.NET\Assembly\TXDocumentServer.dll</HintPath>
-    </Reference>
-    <Reference Include="txic">
-      <HintPath>..\..\..\..\..\Program Files\Text Control GmbH\TX Text Control 32.0.NET Server for ASP.NET\Assembly\bin64\txic.dll</HintPath>
-    </Reference>
-    <Reference Include="TXImageProvider">
-      <HintPath>..\..\..\..\..\Program Files\Text Control GmbH\TX Text Control 32.0.NET Server for ASP.NET\Assembly\TXImageProvider.dll</HintPath>
-    </Reference>
-    <Reference Include="txkernel">
-      <HintPath>..\..\..\..\..\Program Files\Text Control GmbH\TX Text Control 32.0.NET Server for ASP.NET\Assembly\bin64\txkernel.dll</HintPath>
-    </Reference>
-    <Reference Include="TXTextControl">
-      <HintPath>..\..\..\..\..\Program Files\Text Control GmbH\TX Text Control 32.0.NET Server for ASP.NET\Assembly\TXTextControl.dll</HintPath>
-    </Reference>
-    <Reference Include="TXTextControl.Server">
-      <HintPath>..\..\..\..\..\Program Files\Text Control GmbH\TX Text Control 32.0.NET Server for ASP.NET\Assembly\TXTextControl.Server.dll</HintPath>
-    </Reference>
-    <Reference Include="txtools">
-      <HintPath>..\..\..\..\..\Program Files\Text Control GmbH\TX Text Control 32.0.NET Server for ASP.NET\Assembly\bin64\txtools.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.10" />
+    <PackageReference Include="TXTextControl.TextControl.ASP.SDK" Version="32.0.4" />
+    <PackageReference Include="TXTextControl.Web.DocumentViewer" Version="32.4.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -72,25 +40,13 @@
     <None Update="tx31_xlx.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="tx32_css.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="tx32_doc.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="tx32_dox.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="tx32_htm.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="tx32_pdf.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="tx32_rtf.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="tx32_xlx.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="tx32_xml.dll">
